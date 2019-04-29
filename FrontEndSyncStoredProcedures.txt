@@ -1,0 +1,20 @@
+USE [WattsALoanSub]
+GO
+/****** Object:  StoredProcedure [dbo].[InsertCondition]    Script Date: 18/10/2017 9:29:39 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[InsertCondition] 
+@Condition varchar(20)
+
+AS
+
+BEGIN
+
+INSERT INTO [dbo].[Conditions]
+           ([Condition])
+     VALUES
+           (@Condition)
+END
